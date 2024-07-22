@@ -30,29 +30,27 @@ Both the scene and the aero snap window are customizable.
 
 ![demo_aero_snap](https://res.cloudinary.com/dq6zv8koj/image/upload/v1667243031/GitHub-Assets/BorderlessSceneFX/demo_aero_snap_xbase8.gif)
 
-This project has been forked and further developed from [this](https://github.com/goxr3plus/FX-BorderlessScene/) GitHub
+This project has been forked and further developed from [this](https://github.com/CatWithAWand/BorderlessSceneFX/tree/main) GitHub
 repository.
 
 ## Getting Started
 
 Add BorderlessSceneFX to your dependencies
 
-### Gradle
-
-```groovy
-dependencies {
-    implementation 'com.catwithawand:borderlessscenefx:1.0.0'
-}
-```
-
 ### Maven
 
 ``` XML
 <dependency>
-  <groupId>com.catwithawand</groupId>
-  <artifactId>BorderlessSceneFX</artifactId>
-  <version>1.0.0</version>
+    <groupId>com.bentaii</groupId>
+    <artifactId>BorderlessSceneFX</artifactId>
 </dependency>
+```
+
+You will also need to add this to your application's args file as we access com.sun.glass.ui.Window to get the Window.
+This is used for hovering over the taskbar icon and showing a preview of the window. If we remove this feature, 
+there would be no need for this anymore.
+```
+--add-exports javafx.graphics/com.sun.glass.ui=ALL-UNNAMED
 ```
 
 ## Example
